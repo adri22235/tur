@@ -17,7 +17,7 @@ termux_step_pre_configure() {
 		RUSTFLAGS+=" -C link-arg=$($CC -print-libgcc-file-name)"
 	fi
 
-	# https://github.com/termux-user-repository/tur/pull/591#discussion_r2701702095
+	# See https://github.com/termux-user-repository/tur/pull/591#discussion_r2701702095
 	cargo vendor
 	find ./vendor \
 		-mindepth 1 -maxdepth 1 -type d \
